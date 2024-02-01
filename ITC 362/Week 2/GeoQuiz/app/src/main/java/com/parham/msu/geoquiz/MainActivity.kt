@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       trueButton = findViewById(R.id.true_button)
+       /*trueButton = findViewById(R.id.true_button)
         falseButton = findViewById(R.id.False_button)
 
         trueButton.setOnClickListener{view: View ->
@@ -33,6 +33,22 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT)
                 .show()
 
+        }*/
+        trueButton.setOnClickListener{
+            val snackBar = Snackbar.make(
+                it,
+                "Correct",
+                Snackbar.LENGTH_LONG
+            )
+            snackBar.show()
+        }
+        falseButton.setOnClickListener{
+            val snackBar = Snackbar.make(
+                it,
+                "Incorrect",
+                Snackbar.LENGTH_LONG
+            )
+            snackBar.show()
         }
     }
 }
